@@ -1,6 +1,7 @@
 (function (window) {
     var zepto = {}
 
+    // 构造函数
     function Z(dom, selector) {
         var i, len = dom ? dom.length : 0
         for (i = 0; i < len; i++) {
@@ -22,6 +23,7 @@
     }
 
     window.$ = $
+
     $.fn = {
         css: function (key, value) {
             alert('css')
@@ -31,5 +33,6 @@
         }
     }
 
-    Z.prototype = $.fn
+    Z.prototype = $.fn // 定义构造函数的原型
+
 })(window)
